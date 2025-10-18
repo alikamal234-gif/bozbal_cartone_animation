@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(53, 52, 52);
+        }
+        .face{
+            width: 400px;
+            height: 500px;
+            background-color: bisque;
+            border-end-end-radius: 45%;
+            border-end-start-radius: 50%;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .face::before{
+            content: "";
+            width: 450px;
+            height: 200px;
+            position: absolute;
+            background-color: black;
+            /* right: 170px; */
+            transform: translateX(-20px);
+            z-index: -1;
+            bottom: 550px;
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+        }
+        
+        .just--eyes{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+        .just--eyes::after{
+            content: "";
+            width: 500px;
+            height: 100px;
+            background-color: bisque;
+            position: absolute;
+            z-index: -1;
+            border: 1px solid black;
+            border-end-end-radius: 50px;
+            border-end-start-radius: 50px;
+            border-start-end-radius: 30px;
+            border-start-start-radius: 30px;
+        }
+        .eayes--left{
+            width: 150px;
+            height: 60px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            border-radius: 100%;
+            border: 2px solid black;
+        }
+        .eayes--right{
+            width: 150px;
+            height: 60px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            border-radius: 100%;
+            border: 2px solid black;
+
+        }
+        .face--eayes--hjban{
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .hjban--left,
+        .hjban--right{
+            width: 150px;
+            height: 20px;
+            background-color: black;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        .face--nose{
+            display: flex;
+            justify-content: space-between;
+        }
+        .nose--left{
+            width: 40%;
+            height: 100%;
+            border-right: 1px solid black;
+            border-bottom-right-radius: 30%;
+        }
+        .nose--right{
+            width: 40%;
+            height: 100%;
+            border-left: 1px solid black;
+            border-bottom-left-radius: 30%;
+
+        }
+        .face--lape{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .lipce--bouche{
+            width: 200px;
+            height: 60px;
+            background-color: rgb(184, 147, 103);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            animation: lips 1s infinite linear;
+        }
+        @keyframes lips{
+            0%{
+                height: 0;
+            }
+            30%{
+                height: 60px;
+            }
+            50%{
+                height: 60px;
+            }
+            100%{
+                height: 0;
+            }
+            
+        }
+        .teth{
+            width: 100%;
+            height: 50%;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+        .the{
+            width: 20px;
+            height: 100%;
+            border: 1px solid black;
+        }
+        .momo{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 100%;
+            animation: moves 2s infinite linear;
+        }
+        
+        @keyframes moves{
+            0%{
+                transform: translate(40px);
+            }
+            30%{
+                transform: translate(0);
+            }
+            50%{
+                transform: translate(-40px);
+            }
+            100%{
+                transform: translate(40px);
+            }
+        }
+        #blackthe{
+            background-color: black;
+        }
+        .body_face{
+            width: 600px;
+            background-color: rgb(0, 0, 0);
+            height: 100px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border: 6px solid white;
+            display: flex;
+            justify-content: center;
+        }
+        .neck{
+            height: 80px;
+            background-color: bisque;
+            width: 150px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+        }
+        .body_and_face{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .byad2{
+            width: 40%;
+            height: 90%;
+            border-top-left-radius: 30px;
+            background-color: black;
+            border: 6px solid white;
+            border-bottom: none;
+        }
+        .byad1{
+            width: 40%;
+            height: 90%;
+            border-top-right-radius: 30px;
+            background-color: black;
+            border: 6px solid white;
+            border-bottom: none;
+        }
+        .snsla{
+            width: 6px;
+            height: 100%;
+            background-color: white;
+        }
+    </style>
+<body>
+    <div class="body_and_face">
+
+    
+    <div class="face">
+
+        <div class="face--eayes">
+            <div class="face--eayes--hjban">
+                <div class="hjban--left">
+                </div>
+                <div class="hjban--right"></div>
+            </div>
+            <div class="just--eyes">
+                <div class="eayes--left">
+                    <div class="momo"></div>
+                </div>
+                <div class="eayes--right">
+                    <div class="momo"></div>
+                </div>
+            </div>
+        </div>
+        <div class="face--nose">
+            <div class="nose--left"></div>
+            <div class="nose--right"></div>
+        </div>
+        <div class="face--lape">
+            <div class="lipce--bouche">
+                <div class="teth">
+                    <div class="the"></div>
+                    <div class="the"></div>
+                    <div class="the"></div>
+                    <div class="the"></div>
+                    <div class="the"></div>
+                    <div class="the" id="blackthe"></div>
+                    <div class="the"></div>
+                    <div class="the"></div>
+                    <div class="the"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="neck">
+        <div class="byad1"></div>
+        
+        <div class="byad2"></div>
+    </div>
+    <div class="body_face">
+        <div class="snsla"></div>
+    </div>
+    </div>
+</body>
+</html>
